@@ -1,10 +1,16 @@
+#Import pywt to compute CWT
 import pywt
 import numpy as np
 import matplotlib.pyplot as plt
+#time-space
 t = np.linspace(0, 1, 200)
+#Define our signal
 signal = np.cos(2 * np.pi * 7 * t) + np.real(np.exp(-7 * (t-0.4)**2)*np.exp(1j*2*np.pi*2*(t-0.4)))
+#Define the scales
 scales = np.arange(1, 31)
+#Finds the CWT Coefficients and corresponding frequencies
 coef, freqs = pywt.cwt(signal, scales, 'gaus1')
+#Scalogram plot
 plt.figure(figsize=(15, 10))
 plt.imshow(abs(coef), extent=[0, 200, 30, 1], interpolation='bilinear', cmap='bone',
            aspect='auto', vmax=abs(coef).max(), vmin=abs(coef).max())
