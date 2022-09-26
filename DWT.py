@@ -1,7 +1,7 @@
 #Discrete Wavelet Transform of ElectroCardiogram
 
 import numpy as np
-import PyWavelets as pywt
+import pywt
 from skimage.restoration import denoise_wavelet
 import matplotlib.pyplot as plt
 x = pywt.data.ecg().astype(float)/256
