@@ -1,5 +1,4 @@
 #Discrete Wavelet Transform of ElectroCardiogram
-
 import numpy as np
 import pywt
 from skimage.restoration import denoise_wavelet
