@@ -16,7 +16,7 @@ plt.imshow(abs(coefficients), extent=[0, 10e-3, 20, 1], interpolation='bilinear'
            aspect='auto', vmax=abs(coefficients).max(), vmin=abs(coefficients).max())
 plt.gca().invert_yaxis()
 plt.yticks(np.arange(1, 21, 1))
-plt.xticks(np.arange(0, numSeconds/samplesPerSecond, numSe/(20*samplesPerSecond)))
+plt.xticks(np.arange(0, numSeconds/samplesPerSecond, numSeconds/(20*samplesPerSecond)))
 plt.show()
 plt.figure(figsize=(15, 10))
 plt.plot(tpoints, x)
