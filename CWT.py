@@ -13,7 +13,7 @@ coefficients, frequencies = pywt.cwt(signal, scales, 'gaus1')
 #Scalogram plot
 plt.figure(figsize=(15, 10))
 plt.imshow(abs(coefficients), extent=[0, 200, 30, 1], interpolation='bilinear', cmap='bone',
-           aspect='auto', vmax=abs(coef).max(), vmin=abs(coef).max())
+           aspect='auto', vmax=abs(coefficients).max(), vmin=abs(coefficients).max())
 plt.gca().invert_yaxis()
 plt.yticks(np.arange(1, 31, 1))
 plt.xticks(np.arange(0, 201, 10))
